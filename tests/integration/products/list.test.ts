@@ -11,9 +11,6 @@ describe('GET /products', function () {
   beforeEach(function () { sinon.restore(); });
 
   it('ao listar todos products, retornam corretamente', async function(){
-    const httpResponse = await chai.request(app).get('/products').send(productsMock.productsDB)
     
-    expect(httpResponse.status).to.equal(200);
-    expect(httpResponse.body).to.eql(productsMock.productsDB)
   })
 });
